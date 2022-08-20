@@ -17,8 +17,9 @@ func init() {
 }
 
 func main() {
+	fs :=  http.FileServer(http.Dir("./assets"))
+	http.Handle("/static/", http.StripPrefix("/static", fs))
 	http.HandleFunc("/", homePageRoute)
-
 	log.Fatal(http.ListenAndServe(":9090", nil))
 }
 

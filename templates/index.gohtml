@@ -2,17 +2,19 @@
 <html lang="en">
 {{template "head" .}}
 <body>
-{{template "nav"}} 
-<main>
-    <h1>Code of Fury Blog</h1>
-    <ul class="blog-listing">
-        {{range $key, $post := .Posts}}
-            <li class="blog-listing__item">
-                <a href={{$post.URL}} class="blog-listing__link">{{$post.Title}}</a>
-            </li>
-        {{end}}
-    </ul>
-</main>
-{{template "footer"}}
+<div class="ux-container">
+    {{template "nav"}} 
+        <main>
+            <h1 class="t--header-1">Code of Fury Blog</h1>
+            <ul class="blog-listing">
+                {{range $key, $post := .Posts}}
+                    <li class="blog-listing__item">
+                        <a href={{$post.URL}} class="blog-listing__link">{{$post.Title}}</a>
+                    </li>
+                {{end}}
+            </ul>
+        </main>
+    {{template "footer"}}
+</div>
 </body>
 </html>

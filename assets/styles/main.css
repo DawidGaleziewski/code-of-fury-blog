@@ -1,0 +1,30 @@
+/* Global */
+html {
+    font-size: 10px;
+    font-family: 'Lucida Console','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:#F9F5D7;
+    color: #1D2021;
+}
+
+.ux-container {
+    max-width: 1000px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Typography */
+.t--header-1 {
+    font-size: 4.883rem;
+    line-height: 7.2rem;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.t--base {
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+}
+
+/* Navigation */
