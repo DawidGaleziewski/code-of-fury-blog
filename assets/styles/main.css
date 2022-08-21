@@ -22,9 +22,66 @@ html {
     margin: 0;
 }
 
+.t--header-2 {
+    font-size: 39.06px;
+    line-height: 5.8rem;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
 .t--base {
     font-size: 1.6rem;
     line-height: 3.2rem;
 }
 
+.link {
+    color: #00B7EB;
+}
+
 /* Navigation */
+.nav__listing {
+    padding: 0;
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__item {
+    margin-right: 1.6rem;
+}
+
+.nav__link {
+    color: #00B7EB;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+}
+
+.nav__link:hover {
+    background-color:#00B7EB;
+    color:#F9F5D7;
+}
+
+.blog-listing__link:hover {
+    background-color:#00B7EB;
+    color:#F9F5D7;
+}
+
+.blog-listing {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.blog-listing__item {
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+}
+
+.blog-listing__link {
+
+}
+
+.blog-listing__link:hover {
+    background-color:#00B7EB;
+    color:#F9F5D7;
+}

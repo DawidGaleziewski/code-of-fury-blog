@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -20,6 +21,7 @@ func main() {
 	fs :=  http.FileServer(http.Dir("./assets"))
 	http.Handle("/static/", http.StripPrefix("/static", fs))
 	http.HandleFunc("/", homePageRoute)
+	http.HandleFunc("/post/", postPageRoute)
 	log.Fatal(http.ListenAndServe(":9090", nil))
 }
 
@@ -39,6 +41,23 @@ func homePageRoute(w http.ResponseWriter, r *http.Request){
 		},
 	}
 	err := tpl.ExecuteTemplate(w, "index.gohtml", data)
+
+	if err != nil {
+		log.Panicln(err)
+	}
+}
+
+func postPageRoute(w http.ResponseWriter, r *http.Request){
+	postID := r.URL.Path[len("/post/"):]
+	fmt.Println(postID)
+	data := struct{
+		Title string;
+		Body string;
+	}{
+		Title: "Go related blog",
+		Body: "Hellow from text here",
+	}
+	err := tpl.ExecuteTemplate(w, "post.gohtml", data)
 
 	if err != nil {
 		log.Panicln(err)

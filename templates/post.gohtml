@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{{template "head" .}}
+<body>
+<div class="ux-container">
+    {{template "nav"}} 
+        <main>
+            <h1 class="t--header-1">Code of Fury Blog</h1>
+
+            <article>
+                <header>
+                    <h2 class="t--header-2">{{.Title}}</h2>
+                </header>
+
+                <main class="t--base">
+                    {{.Body}}
+                </main>
+            </article> 
+
+        </main>
+    {{template "footer"}}
+</div>
+</body>
+</html>
